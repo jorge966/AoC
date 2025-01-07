@@ -23,3 +23,15 @@ The nested loop implementation worked, and for the 1000 strong list, we would be
 In doing so, we loop through the second list once (1000 times) and then we loop through the first list (1000 times) making our total number of iterations only 2 x 1000.
 
 There is also a builtin collections class that actually does this for us: [link to Python Counter here.](https://docs.python.org/3/library/collections.html#collections.Counter)
+
+# AoC Day 2 Part 1 Thoughts
+
+## 1. Creating a clear mental model is important to our understanding of how to solve the problem
+
+Initially, when coming up with the solution and implementing it, we got stuck on where we needed to add certain values to correctly set the values we need to keep track of as we iterate through each list. Because our mental model wasn't where our implementation ended up there was confusion on how we wanted to validate a "safe" string vs an "unsafe" string. 
+
+## 2. Solving discrepancies with our mental model vs the code with the Debugger
+
+Whenever we get lost in our code, or the outcome isn't doing what we want it to, a good failsafe is to jump into the debugger. We learned how to set breakpoints, and how to use the step over function to execute our code line by line. This helps us keep track of all the variables we've instantiated, what values they're currently holding, and how those values change during runtime.
+
+In doing so, we figured out where we needed to set the `previous_element` variable properly, and we could visuallize when our code hit a `break` to exit our inner loop.
