@@ -1,8 +1,8 @@
 
-with open("input_rules") as f:
+with open("input_rules.txt") as f:
     raw_rules = f.read().strip().split("\n")
 
-with open("input") as x:
+with open("input.txt") as x:
     raw_input = x.read().strip().split("\n")
 
 corrected_list = []
